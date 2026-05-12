@@ -701,7 +701,7 @@ header.main-header .header-sticky.active {
     font-size: 20px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .tel {
         display: none !important;
     }
@@ -4274,7 +4274,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .page-single-post {
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
 .post-single-meta ol li.breadcrumb-item {
@@ -4935,7 +4935,7 @@ input:-webkit-autofill:focus,
 
 .faq-catagery-list {
     background-color: var(--secondary-color);
-    border-radius: 62px;
+    border-radius: 20px;
     padding: 15px;
 }
 
@@ -5129,6 +5129,10 @@ input:-webkit-autofill:focus,
 
 .show {
     display: block;
+}
+
+.w-fit{
+    width: fit-content;
 }
 
 

@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Car extends Model
 {
     /** The attributes that are mass assignable. */
-
-    
     protected $fillable = [
+        'lang',
         'car_name',
         'car_slug',
         'brand',
@@ -24,7 +23,7 @@ class Car extends Model
         'extras',
         'car_power',
         'car_year',
-        'car_text1', 
+        'car_text1',
         'car_text2',
            'car_text3'
     ];

@@ -7,7 +7,7 @@ return [
     'menu_services'  => 'Services',
     'menu_about'     => 'About us',
     'menu_contact'   => 'Contacts',
-
+   'menu_blog'      =>  'Blog',
     // Admin
     'menu_admin'     => 'Admin',
     'menu_dashboard' => 'Dashboard',

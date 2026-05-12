@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\ProfileController;
@@ -26,7 +27,6 @@ Route::get('/change-language/{lang}', function ($lang) {
     App::setLocale($lang);
 
     return redirect()->back();
-
 })->name('change-language');
 
 Route::get('/', [FrontEndController::class, 'home']);
@@ -44,19 +44,39 @@ Route::post('/contact/form/send', [FrontEndController::class, 'sendContactForm']
 Route::get('/cars', [CarsController::class, 'home']);
 Route::get('/car/{car_slug}', [CarsController::class, 'show']);
 
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/article/{article_slug}', [BlogController::class, 'article']);
+
+
+
 
 Route::middleware('auth')->group(function () {
 
 
-    Route::prefix('dashboard/cars')->group(function () {
-        Route::get('/list', [CarsController::class, 'dashboard'])->name('dashboard');
-        Route::get('/list/{id}/edit', [CarsController::class, 'edit']);
+    Route::prefix('dashboard')->group(function () {
 
-        Route::get('/create', [CarsController::class, 'createCarView'])->name('cars.create.view');
-        Route::post('/create', [CarsController::class, 'create'])->name('car.create');
-        Route::patch('/update', [CarsController::class, 'update'])->name('car.update');
-        Route::delete('/delete', [CarsController::class, 'delete'])->name('car.delete');
+        Route::prefix('cars')->group(function () {
+            Route::get('/list', [CarsController::class, 'dashboard'])->name('dashboard');
+            Route::get('/list/{slug}/edit', [CarsController::class, 'edit']);
+            Route::get('/create', [CarsController::class, 'createCarView'])->name('cars.create.view');
+            Route::post('/create', [CarsController::class, 'create'])->name('car.create');
+            Route::patch('/update', [CarsController::class, 'update'])->name('car.update');
+            Route::delete('/delete', [CarsController::class, 'delete'])->name('car.delete');
+        });
+
+        Route::prefix('blog')->group(function () {
+            /** Blog Routing */
+            Route::get('/list', [BlogController::class, 'index'])->name('blog.index');
+            Route::get('/{slug}/edit', [BlogController::class, 'show']);
+            Route::get('/create-view', [BlogController::class, 'createBlogView'])->name('blog.create-view');
+
+            Route::post('/create', [BlogController::class, 'create'])->name('blog.create');
+            Route::patch('/update', [BlogController::class, 'update'])->name('blog.update');
+            Route::delete('/delete', [BlogController::class, 'delete'])->name('blog.delete');
+        });
     });
+
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

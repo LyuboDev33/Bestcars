@@ -7,6 +7,7 @@ return [
     'menu_services'  => 'Услуги',
     'menu_about'     => 'За нас',
     'menu_contact'   => 'Контакти',
+    'menu_blog'      =>  'Блог',
 
     // Admin
     'menu_admin'     => 'Админ',

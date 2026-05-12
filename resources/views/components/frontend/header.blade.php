@@ -71,6 +71,12 @@
                                     </a>
                                 </li>
 
+                                        <li class="nav-item">
+                                    <a class="nav-link" href="/blog">
+                                        {{ __('header.menu_blog') }}
+                                    </a>
+                                </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="/contact">
                                         {{ __('header.menu_contact') }}

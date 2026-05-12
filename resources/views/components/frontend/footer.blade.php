@@ -38,25 +38,25 @@
                     <h3>{{ __('footer.links_title') }}</h3>
                     <ul>
                         <li>
-                            <a href="/{{ app()->getLocale() }}">
+                            <a href="">
                                 {{ __('footer.link_home') }}
                             </a>
                         </li>
 
                         <li>
-                            <a href="/{{ app()->getLocale() }}/about">
+                            <a href="/about">
                                 {{ __('footer.link_about') }}
                             </a>
                         </li>
 
                         <li>
-                            <a href="/{{ app()->getLocale() }}/contact">
+                            <a href="/contact">
                                 {{ __('footer.link_contact') }}
                             </a>
                         </li>
 
                         <li>
-                            <a href="/{{ app()->getLocale() }}/services">
+                            <a href="/services">
                                 {{ __('footer.link_services') }}
                             </a>
                         </li>
@@ -134,11 +134,17 @@
 
 
 <script>
-    if ($('#createCar')) {
+    const tinyMCESelectors = ['#createCar_bg',
+        '#createCar_en', '#createCar2_bg', '#createCar2_en', '#createCar3_bg',
+        '#createCar3_en', '#createBlog', '#createBlogBg', '#createBlogEn'
+    ];
+
+    if (document.querySelectorAll(tinyMCESelectors.join(', ')).length > 0) {
         tinymce.init({
-            selector: '#createCar, #createCar2, #createCar3',
+            selector: tinyMCESelectors.join(', '),
             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+            language_load: false,
         });
     }
 </script>

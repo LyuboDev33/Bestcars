@@ -11,6 +11,10 @@ return [
     'hero_description'  => 'Our premium and VIP vehicles guarantee unmatched comfort and first-class service for business trips, airport transfers or special occasions',
     'hero_btn_book'     => 'Book a car',
     'hero_btn_learn'    => 'Learn more',
+    'day'               => 'Day',
+    'showroom'          => 'Show room',
+    'save_now'          => 'Book now',
+
 
     // Filter / Rent details
     'filter_car_type'           => 'Car Type',
@@ -79,6 +83,120 @@ return [
     'how_step_3_text'   => 'Receive the vehicle at the agreed time and enjoy a comfortable, safe and prestigious journey.',
 
     'how_clients_text'  => '+ satisfied clients have trusted us',
+
+    // Show car
+    'max_passengers' => 'Max Passengers',
+    'max_luggage'    => 'Max Luggage',
+    'doors'          => 'Doors',
+    'transmission'   => 'Transmission',
+    'automatic'      => 'Automatic',
+    'year'           => 'Year',
+    'horse_power'    => 'Horse Power',
+
+    'fully_equipped_cars' => 'Fully Equipped Vehicles',
+    'fully_equipped_cars_text' => 'Equipped with full insurance, liability coverage, and road tax vignette.',
+
+    'easy_rental_process' => 'Easy Rental Process',
+    'easy_rental_process_text' => 'Quick vehicle pickup with minimal requirements.',
+    'main_information' => 'Main information',
+
+
+    'free_cancellation' => 'Free reservation cancellation up to 48 hours',
+    'pay_on_pickup' => 'Payment upon vehicle pickup',
+    'fully_insured_cars' => 'Fully equipped vehicles with full insurance and liability coverage',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Amenities
+    |--------------------------------------------------------------------------
+    */
+
+    'amenities_small_title' => 'Аmenities',
+    'amenities_title'       => 'Vehicle Amenities',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Documents Section
+    |--------------------------------------------------------------------------
+    */
+
+    'documents_small_title' => 'Documents',
+
+    'documents_title' => 'Your trusted partner for luxury and executive car rentals',
+
+    'documents_description' => 'We provide high-class vehicles that combine comfort, elegance, and flawless appearance. Our mission is to deliver a premium rent-a-car experience that meets the highest standards for quality, security, and service. All our vehicles are fully equipped and maintained in excellent technical condition, including full insurance coverage, liability insurance, technical inspection, and annual road vignette.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cancel Reservation
+    |--------------------------------------------------------------------------
+    */
+
+    'cancel_title' => 'How does reservation cancellation work?',
+
+    'cancel_description' => 'We offer free reservation cancellation up to 48 hours before the rental begins. During this period, no deposit is required and no cancellation fees are charged. Our goal is to provide maximum flexibility and peace of mind when planning your trip.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Payment
+    |--------------------------------------------------------------------------
+    */
+
+    'payment_title' => 'How is the payment made?',
+
+    'payment_description' => 'Payment is made upon vehicle pickup. If necessary, we can provide additional information regarding payment methods during the reservation confirmation process.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Invoice
+    |--------------------------------------------------------------------------
+    */
+
+    'invoice_title' => 'Is an invoice issued?',
+
+    'invoice_description' => 'Yes. An invoice is issued upon payment, including for companies. If you have specific invoicing requirements, they can be clarified when receiving the vehicle.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Required Documents
+    |--------------------------------------------------------------------------
+    */
+
+    'required_documents_title' => 'Required documents for renting a vehicle',
+
+    'required_documents_description' => 'When receiving the vehicle, a motor vehicle rental agreement is signed. For this purpose, you must present a valid driving license and ID card, with a minimum of 2 years of driving experience required. Detailed terms and responsibilities are described in the rental agreement signed upon vehicle handover.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Deposit
+    |--------------------------------------------------------------------------
+    */
+
+    'deposit_title' => 'Is a deposit required?',
+
+    'deposit_description' => 'A deposit of 500 EUR is required when renting a vehicle, payable in cash upon pickup. No deposit is required for chauffeur services.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Fines
+    |--------------------------------------------------------------------------
+    */
+
+    'fines_title' => 'Fines and traffic violations',
+
+    'fines_description' => 'All fines, penalties, and other traffic violations occurring during the rental period are the responsibility of the driver.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Accidents
+    |--------------------------------------------------------------------------
+    */
+
+    'accidents_title' => 'Road traffic accidents',
+
+    'accidents_description' => 'In the event of a serious traffic accident, an official accident report from the Traffic Police or a bilateral accident report between the involved parties is required. Additional procedures and responsibilities are described in the rental agreement.',
+
+
 
     // Testimonials
     'testimonials_subtitle' => 'Testimonials',

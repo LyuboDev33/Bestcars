@@ -118,10 +118,32 @@
         modal.addEventListener('click', function (e) {
             e.stopPropagation();
         })
-
-
-
     }
+
+    if ($('.deleteBlog').length) {
+
+    const blogDeleteButtons = document.querySelectorAll('.deleteBlog');
+    const backgroundModal = document.querySelector('.background-modal');
+    const modal = document.querySelector('.custom-modal');
+    const blogDeleteInput = document.querySelector('.blogDeleteInput');
+
+    blogDeleteButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const parent = button.parentElement;
+            const blogSlug = parent.querySelector('.blogSlug').value;
+            backgroundModal.style.display = 'flex';
+            blogDeleteInput.value = blogSlug;
+        });
+    });
+
+    backgroundModal.addEventListener('click', function () {
+        this.style.display = 'none';
+    });
+
+    modal.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+}
 
     /* Car Details Slider JS */
     if ($('.car-details-slider').length) {

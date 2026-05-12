@@ -20,19 +20,43 @@
                             <!-- Feets Single Sidebar List Start -->
                             <div class="fleets-single-sidebar-list">
                                 <ul>
-                                    <li><img src="/images/icon-fleets-single-sidebar-list-1.svg" alt="{{ $car->car_name }}">Макс. брой
-                                        пътници <span>{{ $car->max_passengers }}</span></li>
-                                    <li><img src="/images/icon-fleets-single-sidebar-list-2.svg" alt="{{ $car->car_name }}">Макс.
-                                        брой куфари <span>{{ $car->luggage }}</span></li>
-                                    <li><img src="/images/icon-fleets-single-sidebar-list-3.svg" alt="{{ $car->car_name }}">Врати
+                                    <li>
+                                        <img src="/images/icon-fleets-single-sidebar-list-1.svg"
+                                            alt="{{ $car->car_name }}">
+                                        {{ __('welcome.max_passengers') }}
+                                        <span>{{ $car->max_passengers }}</span>
+                                    </li>
+
+                                    <li>
+                                        <img src="/images/icon-fleets-single-sidebar-list-2.svg"
+                                            alt="{{ $car->car_name }}">
+                                        {{ __('welcome.max_luggage') }}
+                                        <span>{{ $car->luggage }}</span>
+                                    </li>
+
+                                    <li>
+                                        <img src="/images/icon-fleets-single-sidebar-list-3.svg"
+                                            alt="{{ $car->car_name }}">
+                                        {{ __('welcome.doors') }}
                                         <span>{{ $car->doors }}</span>
                                     </li>
-                                    <li><img src="/images/icon-fleets-single-sidebar-list-4.svg"
-                                            alt="">Трансмисия <span>Автоматик</span></li>
-                                    <li><img src="/images/icon-fleets-single-sidebar-list-6.svg" alt="{{ $car->car_name }}">Година
+
+                                    <li>
+                                        <img src="/images/icon-fleets-single-sidebar-list-4.svg" alt="">
+                                        {{ __('welcome.transmission') }}
+                                        <span>{{ __('welcome.automatic') }}</span>
+                                    </li>
+
+                                    <li>
+                                        <img src="/images/icon-fleets-single-sidebar-list-6.svg"
+                                            alt="{{ $car->car_name }}">
+                                        {{ __('welcome.year') }}
                                         <span>{{ $car->car_year }}</span>
                                     </li>
-                                       <li><img src="/images/horse-power-1.png" alt="{{ $car->car_name }}">Конски сили
+
+                                    <li>
+                                        <img src="/images/horse-power-1.png" alt="{{ $car->car_name }}">
+                                        {{ __('welcome.horse_power') }}
                                         <span>{{ $car->car_power }}</span>
                                     </li>
                                 </ul>
@@ -41,9 +65,10 @@
 
                             <!-- Feets Single Sidebar Btn Start -->
                             <div class="fleets-single-sidebar-btn">
-                                <a href="/contact" class="btn-default popup-with-form">Запазете сега</a>
-                                <span>или </span>
-                                <!--<a href="#" class="wp-btn"><i class="fa-brands fa-whatsapp"></i></a>-->
+                                <a href="/contact" class="btn-default popup-with-form">
+                                       {{ __('welcome.save_now') }}
+                                </a>
+                      
                             </div>
                             <!-- Feets Single Sidebar Btn End -->
                         </div>
@@ -183,9 +208,10 @@
                                 <div class="icon-box">
                                     <img src="/images/icon-fleets-benefits-1.svg" alt="">
                                 </div>
+
                                 <div class="fleets-benefits-content">
-                                    <h3>Напълно оборудвани автомобили</h3>
-                                    <p>Оборудвани с автокаско, гражданска отговорност и винетка.</p>
+                                    <h3>{{ __('welcome.fully_equipped_cars') }}</h3>
+                                    <p>{{ __('welcome.fully_equipped_cars_text') }}</p>
                                 </div>
                             </div>
                             <!-- Feets Benefits Item End -->
@@ -195,9 +221,10 @@
                                 <div class="icon-box">
                                     <img src="/images/icon-fleets-benefits-2.svg" alt="">
                                 </div>
+
                                 <div class="fleets-benefits-content">
-                                    <h3>Лесен процес на наемане</h3>
-                                    <p>Бързо получаване на автомобила с минимални изисквания.</p>
+                                    <h3>{{ __('welcome.easy_rental_process') }}</h3>
+                                    <p>{{ __('welcome.easy_rental_process_text') }}</p>
                                 </div>
                             </div>
                             <!-- Feets Benefits Item End -->
@@ -211,7 +238,7 @@
                             <!-- Section Title Start -->
                             <div class="section-title">
 
-                                <h3 class="wow fadeInUp">Основна инормация</h3>
+                                <h3 class="wow fadeInUp">{{ __('welcome.main_information') }}</h3>
 
                                 <div class="row g-4">
 
@@ -230,7 +257,7 @@
                                             </div>
                                         </div>
                                     @endif
-                                    
+
                                     @if (!empty($car->car_text3))
                                         <div class="col-lg-12">
                                             <div class="tinymce-table-wrapper">
@@ -247,25 +274,30 @@
                             <!-- Section Title End -->
 
                             <!-- Feets Information List Start -->
-                            <!-- Feets Information List Start -->
-                            <div class="fleets-information-list wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="fleets-information-list">
                                 <ul>
-                                    <li>Безплатна отмяна на резервация до 48 часа</li>
-                                    <li>Плащане при получаване на автомобила</li>
-                                    <li>Напълно оборудвани автомобили с автокаско и гражданска отговорност</li>
+                                    <li>{{ __('welcome.free_cancellation') }}</li>
+                                    <li>{{ __('welcome.pay_on_pickup') }}</li>
+                                    <li>{{ __('welcome.fully_insured_cars') }}</li>
                                 </ul>
                             </div>
-
                             <!-- Feets Information List End -->
+
                         </div>
                         <!-- Feets Information End -->
 
                         <!-- Feets Amenities Start -->
                         <div class="fleets-amenities">
+
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h3 class="wow fadeInUp">удобства</h3>
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">Удобства на автомобила</h2>
+                                <h3 class="wow fadeInUp">
+                                    {{ __('welcome.amenities_small_title') }}
+                                </h3>
+
+                                <h2 class="text-anime-style-3" data-cursor="-opaque">
+                                    {{ __('welcome.amenities_title') }}
+                                </h2>
                             </div>
                             <!-- Section Title End -->
 
@@ -278,54 +310,46 @@
                                 </ul>
                             </div>
                             <!-- Feets Amenities List End -->
+
                         </div>
                         <!-- Feets Amenities End -->
+
 
                         <div>
                             <!-- About Us Content Start -->
                             <div class="about-content">
-
                                 <!-- Section Title Start -->
                                 <div class="section-title">
-                                    <h3>Документи</h3>
+                                    <h3>
+                                        {{ __('welcome.documents_small_title') }}
+                                    </h3>
                                     <h2>
-                                        Вашият надежден партньор за луксозни и представителни автомобили под наем
+                                        {{ __('welcome.documents_title') }}
                                     </h2>
                                     <p>
-                                        Ние предоставяме висок клас автомобили, съчетаващи комфорт, елегантност и
-                                        безупречна визия.
-                                        Нашата мисия е да предложим премиум рент-а-кар изживяване, което отговаря на
-                                        най-високите
-                                        изисквания за качество, сигурност и обслужване.
-                                        Всички наши автомобили са напълно оборудвани и поддържани в отлично техническо
-                                        състояние,
-                                        като разполагат с валидно пълно автокаско, гражданска отговорност, технически
-                                        преглед
-                                        и годишна винетка.
+                                        {{ __('welcome.documents_description') }}
                                     </p>
                                 </div>
                                 <!-- Section Title End -->
 
+
                                 <!-- About Content Body Start -->
                                 <div class="about-content-body">
-
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
                                         <div class="icon-box">
                                             <img src="/images/icon-about-trusted-1.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Как работи отказването на резервация?</h3>
+                                            <h3>
+                                                {{ __('welcome.cancel_title') }}
+                                            </h3>
                                             <p>
-                                                Предлагаме безплатно анулиране на резервация до 48 часа преди началото
-                                                на наема.
-                                                В този период не се изисква капаро и не се начисляват такси при отказ.
-                                                Нашата цел е да осигурим максимална гъвкавост и спокойствие при
-                                                планирането на
-                                                вашето пътуване.
+                                                {{ __('welcome.cancel_description') }}
                                             </p>
                                         </div>
                                     </div>
+
 
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
@@ -333,15 +357,15 @@
                                             <img src="/images/icon-about-trusted-2.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Как се извършва плащането?</h3>
+                                            <h3>
+                                                {{ __('welcome.payment_title') }}
+                                            </h3>
                                             <p>
-                                                Плащането се извършва при получаване на автомобила. При необходимост
-                                                можем да
-                                                предоставим допълнителна информация за начините на плащане по време на
-                                                потвърждаването на резервацията.
+                                                {{ __('welcome.payment_description') }}
                                             </p>
                                         </div>
                                     </div>
+
 
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
@@ -349,15 +373,15 @@
                                             <img src="/images/icon-about-trusted-2.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Издава ли се фактура?</h3>
+                                            <h3>
+                                                {{ __('welcome.invoice_title') }}
+                                            </h3>
                                             <p>
-                                                Да. При извършване на плащането се издава фактура, включително и за
-                                                фирми.
-                                                Ако имате специфични изисквания относно фактуриране, те могат да бъдат
-                                                уточнени при получаването на автомобила.
+                                                {{ __('welcome.invoice_description') }}
                                             </p>
                                         </div>
                                     </div>
+
 
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
@@ -365,19 +389,15 @@
                                             <img src="/images/icon-about-trusted-2.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Необходими документи за наемане на автомобил</h3>
+                                            <h3>
+                                                {{ __('welcome.required_documents_title') }}
+                                            </h3>
                                             <p>
-                                                При получаване на автомобила се подписва договор за наем на моторно
-                                                превозно средство.
-                                                За целта е необходимо да представите валидна шофьорска книжка и лична
-                                                карта,
-                                                като се изисква минимум 2 години шофьорски стаж.
-                                                Подробните условия и отговорности са описани в договора, който се
-                                                подписва
-                                                при предаването на автомобила.
+                                                {{ __('welcome.required_documents_description') }}
                                             </p>
                                         </div>
                                     </div>
+
 
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
@@ -385,15 +405,16 @@
                                             <img src="/images/icon-about-trusted-2.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Изисква ли се депозит?</h3>
+                                            <h3>
+                                                {{ __('welcome.deposit_title') }}
+                                            </h3>
+
                                             <p>
-                                                При отдаване на автомобил под наем се изисква депозит в размер на 500
-                                                евро,
-                                                който се заплаща в брой при получаването на автомобила.
-                                                За услугите с осигурен шофьор не се изисква депозит.
+                                                {{ __('welcome.deposit_description') }}
                                             </p>
                                         </div>
                                     </div>
+
 
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
@@ -401,14 +422,16 @@
                                             <img src="/images/icon-about-trusted-2.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Глоби и пътни нарушения</h3>
+                                            <h3>
+                                                {{ __('welcome.fines_title') }}
+                                            </h3>
+
                                             <p>
-                                                Всички глоби, санкции и други пътни нарушения, възникнали по време на
-                                                периода
-                                                на наемане на автомобила, се поемат от водача.
+                                                {{ __('welcome.fines_description') }}
                                             </p>
                                         </div>
                                     </div>
+
 
                                     <!-- Trusted Booking Item -->
                                     <div class="about-trusted-booking">
@@ -416,22 +439,18 @@
                                             <img src="/images/icon-about-trusted-2.svg" alt="">
                                         </div>
                                         <div class="trusted-booking-content">
-                                            <h3>Пътнотранспортни произшествия</h3>
+                                            <h3>
+                                                {{ __('welcome.accidents_title') }}
+                                            </h3>
                                             <p>
-                                                В случай на по-сериозно пътнотранспортно произшествие е необходимо да
-                                                бъде
-                                                изготвен констативен протокол от КАТ – Пътна полиция или двустранен
-                                                протокол между участниците в инцидента.
-                                                Допълнителните процедури и задължения са подробно описани в договора за
-                                                наем.
+                                                {{ __('welcome.accidents_description') }}
                                             </p>
                                         </div>
+
                                     </div>
 
                                 </div>
                                 <!-- About Content Body End -->
-
-
                             </div>
                             <!-- About Us Content End -->
                         </div>

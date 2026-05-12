@@ -10,7 +10,7 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Шоурум</h1>
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">{{ __('welcome.showroom') }}</h1>
 
                     </div>
                     <!-- Page Header Box End -->
@@ -22,12 +22,12 @@
     <section class="page-fleets">
         <div class="container">
             <div class="row">
-          
+
                 <div class="col-lg-12">
                     <!-- Fleets Collection Box Start -->
                     <div class="fleets-collection-box">
                         <div class="row">
-                            
+
                             @foreach ($cars as $car)
                                 <div class="col-lg-3 col-md-6">
                                     <!-- Perfect Fleets Item Start -->
@@ -42,7 +42,7 @@
                                         <div class="perfect-fleet-content">
                                             <!-- Perfect Fleets Title Start -->
                                             <div class="perfect-fleet-title">
-                                                <h3>Вид: {{ $car->vehicle_type }}</h3>
+                                                <h3>{{ $car->vehicle_type }}</h3>
                                                 <h2>{{ $car->car_name }}</h2>
                                             </div>
                                             <!-- Perfect Fleets Content End -->
@@ -67,7 +67,7 @@
                                             <div class="perfect-fleet-footer">
                                                 <!-- Perfect Fleets Pricing Start -->
                                                 <div class="perfect-fleet-pricing">
-                                                    <h2>{{ $car->price_per_day }} €<span>/ден</span></h2>
+                                                    <h2>{{ $car->price_per_day }} €<span>/{{ __('day') }}</span></h2>
                                                 </div>
                                                 <!-- Perfect Fleets Pricing End -->
 
@@ -89,7 +89,7 @@
                             @endforeach
 
 
-                           
+
                         </div>
                     </div>
                     <!-- Fleets Collection Box End -->
